@@ -24,7 +24,7 @@ export default function Home() {
       setLoading(true);
       await tx.wait();
       setLoading(false);
-      window.alert("You successfully minted a Crypto Dev!");
+      window.alert("You successfully minted a Crypto Dev! 👏");
     } catch (err) {
       console.error(err);
     }
