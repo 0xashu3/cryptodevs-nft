@@ -41,7 +41,6 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
 
     function mint() public payable onlyWhenNotPaused  {
         require(presaleStarted && block.timestamp >= presaleEnded, "Presale is not running");
-        require(whitelist.whitelistedAddresses(msg.sender), "You are not whitelisted");
         require(tokenIds < maxTokenIds, "Exceeded maximum Cypto Devs supply");
         require(msg.value >= _price, "Ether sent is not correct");
         tokenIds += 1;
